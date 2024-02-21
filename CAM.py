@@ -1,9 +1,10 @@
+
 import re, os
 from pathlib import Path
 
 
 def handle_user_input() -> (str, int):
-    print("Please enter relative path of CAM file")
+    print("Please enter program number of CAM file with extension (.MX2, .MX3, .CAM Files only):")
     input_file_name = input()
     if len(input_file_name) < 5 or input_file_name[-4:] not in [".mx2", ".mx3", ".cam"]:
         raise Exception("Only file extensions allowed are: .mx2 .mx3 .cam")
@@ -77,7 +78,7 @@ def main():
     except Exception as e:
         # print(__file__)
         # print(os.getcwd())
-        print("CRICKEY M8, YOU LOST YAH MAHBLES!\n \n", e)
+        print("That didn't work, reach out if you have issues!\n \n", e)
         input()
 
 
